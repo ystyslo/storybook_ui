@@ -1,0 +1,162 @@
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+}
+
+.label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 4px;
+}
+
+.label.disabled {
+  color: #9ca3af;
+}
+
+.inputWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  background-color: #ffffff;
+  transition: all 0.2s ease-in-out;
+}
+
+.inputWrapper:focus-within {
+  outline: 2px solid #3b82f6;
+  outline-offset: -2px;
+  border-color: #3b82f6;
+}
+
+.inputWrapper.error {
+  border-color: #ef4444;
+}
+
+.inputWrapper.error:focus-within {
+  outline-color: #ef4444;
+  border-color: #ef4444;
+}
+
+.inputWrapper.disabled {
+  background-color: #f9fafb;
+  border-color: #e5e7eb;
+  cursor: not-allowed;
+}
+
+.inputWrapper.sm {
+  height: 32px;
+  padding: 0 8px;
+}
+
+.inputWrapper.md {
+  height: 40px;
+  padding: 0 12px;
+}
+
+.inputWrapper.lg {
+  height: 48px;
+  padding: 0 16px;
+}
+
+.inputWrapper.withActions.sm {
+  padding-right: 36px;
+}
+
+.inputWrapper.withActions.md {
+  padding-right: 44px;
+}
+
+.inputWrapper.withActions.lg {
+  padding-right: 52px;
+}
+
+.input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 14px;
+  color: #374151;
+  width: 100%;
+  height: 100%;
+}
+
+.input::placeholder {
+  color: #9ca3af;
+}
+
+.input:disabled {
+  color: #9ca3af;
+  cursor: not-allowed;
+}
+
+.actions {
+  position: absolute;
+  right: 8px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  height: 100%;
+}
+
+.actionButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border: none;
+  background: none;
+  color: #6b7280;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.2s ease-in-out;
+  padding: 0;
+}
+
+.actionButton:hover {
+  color: #374151;
+  background-color: #f3f4f6;
+}
+
+.actionButton:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: -2px;
+}
+
+.clearButton:hover {
+  color: #ef4444;
+  background-color: #fef2f2;
+}
+
+.passwordToggle:hover {
+  color: #3b82f6;
+  background-color: #eff6ff;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  padding-right: 5px;
+}
+
+.icon.disabled {
+  color: #9ca3af;
+}
+
+.helperText {
+  font-size: 12px;
+  color: #6b7280;
+  margin-top: 4px;
+}
+
+.errorText {
+  color: #ef4444;
+}
