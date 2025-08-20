@@ -1,10 +1,10 @@
+import { Input } from "@/components/Input";
 import type { Meta, StoryObj } from "@storybook/react";
-import { Input } from "../components/Input/Input";
 import { User, Mail, Lock, Search } from "lucide-react";
 import { useState } from "react";
 
 const meta: Meta<typeof Input> = {
-  title: "Components/Input",
+  title: "Form/Input",
   component: Input,
   parameters: {
     layout: "centered",
@@ -34,6 +34,7 @@ export const WithLabel: Story = {
   args: {
     label: "Full Name",
     placeholder: "Enter your full name",
+    icon: <User />,
   },
 };
 
@@ -135,14 +136,7 @@ export const Registration: Story = {
           showPasswordToggle
           helperText="At least 8 characters"
         />
-        <div
-          style={{
-            padding: "12px",
-            backgroundColor: "#f3f4f6",
-            borderRadius: "6px",
-            fontSize: "14px",
-          }}
-        >
+        <div className="text-sm p-4 bg-[#f3f4f6] rounded-md">
           <strong>Values:</strong>
           <br />
           Username: {values.username}

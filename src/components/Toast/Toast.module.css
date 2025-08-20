@@ -1,0 +1,142 @@
+.toastContainer {
+  position: fixed;
+  z-index: 99;
+  max-width: 400px;
+  min-width: 300px;
+}
+
+.toastPortal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 99;
+}
+
+.toast {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  pointer-events: all;
+  border-left: 4px solid;
+}
+
+.toast.success {
+  border-left-color: #10b981;
+}
+
+.toast.error {
+  border-left-color: #ef4444;
+}
+
+.toast.warning {
+  border-left-color: #f59e0b;
+}
+
+.toast.info {
+  border-left-color: #3b82f6;
+}
+
+.content {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 16px;
+}
+
+.iconContainer {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  margin-top: 2px;
+}
+
+.textContainer {
+  flex: 1;
+  min-width: 0;
+}
+
+.title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 4px;
+  line-height: 1.4;
+}
+
+.message {
+  font-size: 14px;
+  color: #6b7280;
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+
+.closeButton {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border: none;
+  background: none;
+  color: #9ca3af;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.2s ease-in-out;
+  padding: 0;
+  margin-top: 2px;
+}
+
+.closeButton:hover {
+  color: #6b7280;
+  background-color: #f3f4f6;
+}
+
+.closeButton:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: -2px;
+}
+
+.progressBar {
+  position: relative;
+  height: 3px;
+  background-color: #e5e7eb;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  transition: width 0.1s linear;
+  background-color: #3b82f6;
+}
+
+@media (max-width: 480px) {
+  .toastContainer {
+    max-width: calc(100vw - 32px);
+    min-width: calc(100vw - 32px);
+    left: 16px !important;
+    right: 16px !important;
+    transform: none !important;
+  }
+
+  .content {
+    padding: 12px;
+    gap: 8px;
+  }
+
+  .message {
+    font-size: 13px;
+  }
+
+  .title {
+    font-size: 13px;
+  }
+}
