@@ -123,11 +123,6 @@
   background-color: #f3f4f6;
 }
 
-.actionButton:focus {
-  outline: 2px solid #3b82f6;
-  outline-offset: -2px;
-}
-
 .clearButton:hover {
   color: #ef4444;
   background-color: #fef2f2;
